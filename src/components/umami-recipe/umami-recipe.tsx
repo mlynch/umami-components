@@ -31,7 +31,8 @@ export class UmamiRecipe {
   @State() recipeImage: string | null = null;
 
   async componentDidLoad() {
-    const res = await fetch(`http://127.0.0.1:8888/jsonapi/node/recipe/${this.recipeId}?include=field_media_image.field_media_image`);
+    const host = 'http://ddba-75-100-202-188.ngrok.io/'; // http://127.0.0.1:8888
+    const res = await fetch(`${host}/jsonapi/node/recipe/${this.recipeId}?include=field_media_image.field_media_image`);
 
     const data = await res.json();
 
