@@ -1,5 +1,5 @@
 {
-  "name": "umami-components",
+  "name": "umami-components-stencil",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",

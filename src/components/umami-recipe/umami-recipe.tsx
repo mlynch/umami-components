@@ -31,7 +31,8 @@ export class UmamiRecipe {
   @State() recipeImage: string | null = null;
 
   async componentDidLoad() {
-    const host = 'http://ddba-75-100-202-188.ngrok.io/'; // http://127.0.0.1:8888
+    // const host = 'http://ddba-75-100-202-188.ngrok.io/'; // http://127.0.0.1:8888
+    const host = 'http://127.0.0.1:8888';
     const res = await fetch(`${host}/jsonapi/node/recipe/${this.recipeId}?include=field_media_image.field_media_image`);
 
     const data = await res.json();
@@ -80,6 +81,7 @@ const RecipeBox = ({ recipe, recipeImage }: { recipe: Recipe, recipeImage: strin
           </div>
           <div class="recipe__data">
             <ul class="recipe__ingredients">
+              <h3>Ingredients</h3>
               {field_ingredients.map((ingredient) => (
                 <li key={ingredient}>{ingredient}</li>
               ))}

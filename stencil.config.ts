@@ -5,8 +5,8 @@ export const config: Config = {
   namespace: 'umami-components',
   outputTargets: [
     angularOutputTarget({
-      componentCorePackage: `umami-components`,
-      directivesProxyFile: `/Users/max/hack/angular-workspace/projects/umami-components/src/lib/stencil-generated/components.ts`
+      componentCorePackage: `umami-components-stencil`,
+      directivesProxyFile: `/Users/max/git/umami-components-angular/projects/umami-components-angular/src/lib/stencil-generated/components.ts`
     }),
     {
       type: 'dist',
